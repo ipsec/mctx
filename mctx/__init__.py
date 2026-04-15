@@ -31,6 +31,16 @@ from mctx._src.base import RootFnOutput
 from mctx._src.policies import gumbel_muzero_policy
 from mctx._src.policies import muzero_policy
 from mctx._src.policies import stochastic_muzero_policy
+from mctx._src.sampled import ContinuousChanceRecurrentFn
+from mctx._src.sampled import ContinuousChanceRecurrentFnOutput
+from mctx._src.sampled import ContinuousDecisionRecurrentFn
+from mctx._src.sampled import ContinuousRecurrentFn
+from mctx._src.sampled import ContinuousRecurrentFnOutput
+from mctx._src.sampled import make_sampled_recurrent_fn
+from mctx._src.sampled import make_sampled_stochastic_fns
+from mctx._src.sampled import PolicyType
+from mctx._src.sampled import sampled_muzero_policy
+from mctx._src.sampled import SampledStateWrapper
 from mctx._src.qtransforms import qtransform_by_min_max
 from mctx._src.qtransforms import qtransform_by_parent_and_siblings
 from mctx._src.qtransforms import qtransform_completed_by_mix_value
@@ -41,25 +51,35 @@ __version__ = "0.0.6"
 
 __all__ = (
     "ChanceRecurrentFnOutput",
+    "ContinuousChanceRecurrentFn",
+    "ContinuousChanceRecurrentFnOutput",
+    "ContinuousDecisionRecurrentFn",
+    "ContinuousRecurrentFn",
+    "ContinuousRecurrentFnOutput",
     "DecisionRecurrentFnOutput",
     "GumbelMuZeroExtraData",
     "InteriorActionSelectionFn",
     "LoopFn",
     "PolicyOutput",
+    "PolicyType",
     "RecurrentFn",
     "RecurrentFnOutput",
     "RecurrentState",
     "RootActionSelectionFn",
     "RootFnOutput",
+    "SampledStateWrapper",
     "Tree",
     "gumbel_muzero_interior_action_selection",
     "gumbel_muzero_policy",
     "gumbel_muzero_root_action_selection",
+    "make_sampled_recurrent_fn",
+    "make_sampled_stochastic_fns",
     "muzero_action_selection",
     "muzero_policy",
     "qtransform_by_min_max",
     "qtransform_by_parent_and_siblings",
     "qtransform_completed_by_mix_value",
+    "sampled_muzero_policy",
     "search",
     "stochastic_muzero_policy",
 )
